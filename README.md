@@ -1,4 +1,4 @@
-# react-native-wheel-datepicker
+# react-native-best-wheel-datepicker
 
 A iOS style picker and datepicker components for ReactNative.
 
@@ -26,19 +26,19 @@ Run command
 For apps using RN 0.32 or higher, please run
 
 ```
-npm i react-native-wheel-datepicker --save
+npm i react-native-best-wheel-datepicker --save
 ```
 
 For apps using RN 0.31 or less, please run
 
 ```
-npm install --save --save-exact react-native-wheel-datepicker@1.9.0
+npm install --save --save-exact react-native-best-wheel-datepicker
 ```
 
 Configration:
 
 ```
-react-native link react-native-wheel-datepicker
+react-native link react-native-best-wheel-datepicker
 ```
 
 ## Ingegration with CustomDatePickerIOS
@@ -58,16 +58,16 @@ link dependencies:
 ```
 react-native link react-native-custom-datepicker-ios
 ```
-And register CustomDatePickerIOS inside react-native-wheel-datepicker package.
+And register CustomDatePickerIOS inside react-native-best-wheel-datepicker package.
 ```js
-import { registerCustomDatePickerIOS } from 'react-native-wheel-datepicker';
+import { registerCustomDatePickerIOS } from 'react-native-best-wheel-datepicker';
 import CustomDatePickerIOS from 'react-native-custom-datepicker-ios';
 
 registerCustomDatePickerIOS(CustomDatePickerIOS);
 ```
 Then you can use textColored components for both platforms inside render function!
 ```jsx
-import { DatePicker } from 'react-native-wheel-datepicker';
+import { DatePicker } from 'react-native-best-wheel-datepicker';
 
 // ...
 render() {
@@ -83,7 +83,7 @@ render() {
 ## Example code
 
 ```jsx
-import { Picker, DatePicker } from 'react-native-wheel-datepicker';
+import { Picker, DatePicker } from 'react-native-best-wheel-datepicker';
 
 // use DatePicker
 <DatePicker
