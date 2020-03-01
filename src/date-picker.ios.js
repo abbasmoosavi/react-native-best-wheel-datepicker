@@ -25,11 +25,11 @@ export default class DatePicker extends PureComponent {
     this.props.onDateChange(date);
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({ date: this.props.date });
   }
 
-  componentWillReceiveProps({ date }) {
+  UNSAFE_componentWillReceiveProps({ date }) {
     this.setState({ date });
   }
 
