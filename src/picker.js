@@ -49,14 +49,16 @@ export default class Picker extends Component {
   }
 
   render() {
-    const { pickerData, style, ...props } = this.props;
+    const { pickerData, style, textSize, itemStyle, textColor, ...props } = this.props;
     return (
       <WheelCurvedPicker
         {...props}
         style={[styles.picker, style]}
         selectedValue={this.state.selectedValue}
         onValueChange={this.handleChange}
-        itemStyle={this.props.itemStyle}
+        itemStyle={itemStyle}
+        textSize={textSize}
+        textColor={textColor}
       >
         {pickerData.map((data, index) => (
           <PickerItem
