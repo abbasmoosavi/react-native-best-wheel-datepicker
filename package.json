@@ -1,6 +1,6 @@
 {
   "name": "react-native-best-wheel-datepicker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React native cross platform iOS-style picker and datepicker.",
   "main": "src/index.js",
   "scripts": {
@@ -35,6 +35,7 @@
     "eslint-plugin-react-native": "^3.1.0"
   },
   "peerDependencies": {
+    "@react-native-community/picker": "^1.6.6",
     "moment": ">=2.0.0",
     "prop-types": "*",
     "react-native": ">=0.45.0"
