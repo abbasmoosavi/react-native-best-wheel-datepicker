@@ -20,7 +20,6 @@ export default class Picker extends Component {
     textColor: ColorPropType,
     textSize: PropTypes.number,
     itemSpace: PropTypes.number,
-    itemStyle: TextPropTypes.style,
     onValueChange: PropTypes.func.isRequired,
     pickerData: PropTypes.array.isRequired,
     style: ViewPropTypes.style,
@@ -31,7 +30,6 @@ export default class Picker extends Component {
     textColor: '#333',
     textSize: 26,
     itemSpace: 20,
-    itemStyle: { color: '#333' },
     style: null,
   };
 
@@ -49,14 +47,13 @@ export default class Picker extends Component {
   }
 
   render() {
-    const { pickerData, style, textSize, itemStyle, textColor, ...props } = this.props;
+    const { pickerData, style, textSize, textColor, ...props } = this.props;
     return (
       <WheelCurvedPicker
         {...props}
         style={[styles.picker, style]}
         selectedValue={this.state.selectedValue}
         onValueChange={this.handleChange}
-        itemStyle={itemStyle}
         textSize={textSize}
         textColor={textColor}
       >
