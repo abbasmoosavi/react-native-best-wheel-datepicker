@@ -25,7 +25,6 @@ class WheelCurvedPicker extends PureComponent {
     textColor: ColorPropType,
     textSize: PropTypes.number,
     itemSpace: PropTypes.number,
-    itemStyle: PropTypes.itemStyle,
     onValueChange: PropTypes.func.isRequired,
     selectedValue: PropTypes.any,
     selectedIndex: PropTypes.number,
@@ -35,7 +34,6 @@ class WheelCurvedPicker extends PureComponent {
     textSize: 26,
     itemSpace: 20,
     textColor: '#333',
-    itemStyle: { color: '#333' }
   };
 
   onValueChange = ({ nativeEvent: { data } }) => this.props.onValueChange(data);
@@ -49,13 +47,13 @@ class WheelCurvedPicker extends PureComponent {
   }
 
   render() {
-    const { children, ...otherProps } = this.props;
+    const { children,textColor, ...otherProps } = this.props;
     return (
       <WheelCurvedPickerNative
         {...otherProps}
         onValueChange={this.onValueChange}
         data={this.state.items}
-        textColor={this.props.itemStyle.color}
+        textColor={textColor}
         selectedIndex={parseInt(this.state.selectedIndex, 10)}
       />
     );
